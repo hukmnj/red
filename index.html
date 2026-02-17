@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=#">
+  <title>Redirecting...</title>
+  <script>
+    // Получаем параметр "to"
+    const params = new URLSearchParams(window.location.search);
+    const target = params.get("to");
+
+    // Проверяем, что параметр есть
+    if (target) {
+      // Делаем редирект
+      window.location.href = target;
+    } else {
+      document.body.innerHTML = "<h2>Не указан параметр ?to=</h2>";
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
